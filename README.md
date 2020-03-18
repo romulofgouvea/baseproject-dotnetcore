@@ -1,0 +1,2 @@
+# baseProject-dotnetcore
+
