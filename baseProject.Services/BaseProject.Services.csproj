@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="FluentValidation.AspNetCore" Version="8.6.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\baseProject.Domain\BaseProject.Domain.csproj" />
+    <ProjectReference Include="..\baseProject.Infra.Data\BaseProject.Infra.Data.csproj" />
+  </ItemGroup>
+
+</Project>
