@@ -1,5 +1,5 @@
 ﻿using BaseProject.Domain.Entities;
-using System.Collections.Generic;
+using System.Linq;
 
 namespace BaseProject.Domain.Interfaces
 {
@@ -9,10 +9,10 @@ namespace BaseProject.Domain.Interfaces
 
         void Update(T obj);
 
-        void Delete(int id);
+        void Delete(T obj);
 
         T Get(int id);
 
-        IList<T> GetAll();
+        IQueryable<T> GetAll();
     }
 }

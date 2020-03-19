@@ -1,35 +1,41 @@
 ﻿using BaseProject.Domain.Entities;
 using BaseProject.Domain.Interfaces;
-using System;
-using System.Collections.Generic;
+using NHibernate;
+using System.Linq;
 
 namespace BaseProject.Infra.Data.Repository
 {
     public class BaseRepository<T> : IRepository<T> where T : BaseEntity
     {
+        private readonly ISession Sessao;
+        public BaseRepository(ISession sessao)
+        {
+            Sessao = sessao;
+        }
+
         public void Save(T obj)
         {
-            throw new NotImplementedException();
+            Sessao.Save(obj);
         }
 
         public void Update(T obj)
         {
-            throw new NotImplementedException();
+            Sessao.Update(obj);
         }
 
-        public void Delete(int id)
+        public void Delete(T obj)
         {
-            throw new NotImplementedException();
+            Sessao.Delete(obj);
         }
 
         public T Get(int id)
         {
-            throw new NotImplementedException();
+            return GetAll().FirstOrDefault(o => o.Id == id);
         }
 
-        public IList<T> GetAll()
+        public IQueryable<T> GetAll()
         {
-            throw new NotImplementedException();
+            return Sessao.Query<T>();
         }
     }
 }

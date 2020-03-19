@@ -8,6 +8,7 @@
 ##
 ## Get latest from https://github.com/github/gitignore/blob/master/VisualStudio.gitignore
 
+
 # User-specific files
 *.rsuser
 *.suo
@@ -530,3 +531,6 @@ MigrationBackup/
 # Backup folder for Package Reference Convert tool in Visual Studio 2017
 
 # End of https://www.gitignore.io/api/csharp,dotnetcore,visualstudio,visualstudiocode
+
+[Bb]aseProject.Application/BaseProject.Application.xml
+.vscode/**

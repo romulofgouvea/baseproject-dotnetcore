@@ -2,20 +2,25 @@
 using BaseProject.Domain.Interfaces;
 using BaseProject.Infra.Data.Repository;
 using FluentValidation;
+using NHibernate;
 using System;
-using System.Collections.Generic;
+using System.Linq;
 
 namespace BaseProject.Services.Services
 {
     public class BaseService<T> : IService<T> where T : BaseEntity
     {
-        private BaseRepository<T> repository = new BaseRepository<T>();
+        private readonly BaseRepository<T> Repository;
+        public BaseService(ISession sessao)
+        {
+            Repository = new BaseRepository<T>(sessao);
+        }
 
         public T Save<V>(T obj) where V : AbstractValidator<T>
         {
             Validate(obj, Activator.CreateInstance<V>());
 
-            repository.Save(obj);
+            Repository.Save(obj);
             return obj;
         }
 
@@ -23,21 +28,20 @@ namespace BaseProject.Services.Services
         {
             Validate(obj, Activator.CreateInstance<V>());
 
-            repository.Update(obj);
+            Repository.Update(obj);
             return obj;
         }
 
-        public void Delete(int id)
+        public void Delete(T obj)
         {
-            if (id == 0)
-                throw new ArgumentException("O id não pode ser 0.");
-
-            repository.Delete(id);
+            if (obj == null || obj.Id == 0)
+                throw new ArgumentException("Objeto inválido.");
+            Repository.Delete(obj);
         }
 
-        public IList<T> GetAll()
+        public IQueryable<T> GetAll()
         {
-            return repository.GetAll();
+            return Repository.GetAll();
         }
 
         public T Get(int id)
@@ -45,7 +49,7 @@ namespace BaseProject.Services.Services
             if (id == 0)
                 throw new ArgumentException("O id não pode ser 0.");
 
-            return repository.Get(id);
+            return Repository.Get(id);
         }
 
         private void Validate(T obj, AbstractValidator<T> validator)

@@ -1,6 +1,6 @@
 ﻿using BaseProject.Domain.Entities;
 using FluentValidation;
-using System.Collections.Generic;
+using System.Linq;
 
 namespace BaseProject.Domain.Interfaces
 {
@@ -10,10 +10,10 @@ namespace BaseProject.Domain.Interfaces
 
         T Update<V>(T obj) where V : AbstractValidator<T>;
 
-        void Delete(int id);
+        void Delete(T obj);
 
         T Get(int id);
 
-        IList<T> GetAll();
+        IQueryable<T> GetAll();
     }
 }
