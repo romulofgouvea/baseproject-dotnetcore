@@ -19,7 +19,7 @@ cd baseproject-dotnetcore
 Após a instalação do framework, basta rodar o seguinte comando na pasta do projeto.
 
 ```bash
-dotnet run
+dotnet run --project baseProject.Application
 ```
 
 O comando acima irá instalar as dependências, buildar os projetos e executar a aplicação. Para mais detalhes sobre o comando `dotnet run` e outros comandos consultar a [documentação do comando](https://docs.microsoft.com/en-us/dotnet/core/tools/dotnet-run).
