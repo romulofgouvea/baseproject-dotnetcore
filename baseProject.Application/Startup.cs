@@ -31,7 +31,7 @@ namespace BaseProject.Application
                 c.SwaggerDoc("v1", new OpenApiInfo
                 {
                     Version = "v1",
-                    Title = "baseProject API",
+                    Title = "BaseProject API",
                     Description = "ASP.NET Core Web API",
                     TermsOfService = new Uri("http://www.lemaf.ufla.br/"),
                     Contact = new OpenApiContact

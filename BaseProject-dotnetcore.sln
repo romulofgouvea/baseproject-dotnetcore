@@ -3,13 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29911.84
 MinimumVisualStudioVersion = 15.0.26124.0
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BaseProject.Domain", "baseProject.Domain\BaseProject.Domain.csproj", "{98B2539B-4ACE-401D-A482-D5DF1BE45103}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BaseProject.Domain", "BaseProject.Domain\BaseProject.Domain.csproj", "{98B2539B-4ACE-401D-A482-D5DF1BE45103}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BaseProject.Infra.Data", "baseProject.Infra.Data\BaseProject.Infra.Data.csproj", "{B4FB1EA8-3FE3-4508-BFB4-AED8D18BBE30}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BaseProject.Infra.Data", "BaseProject.Infra.Data\BaseProject.Infra.Data.csproj", "{B4FB1EA8-3FE3-4508-BFB4-AED8D18BBE30}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BaseProject.Services", "baseProject.Services\BaseProject.Services.csproj", "{ECE61E0B-961C-498B-833E-842E8F7D8EDF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BaseProject.Services", "BaseProject.Services\BaseProject.Services.csproj", "{ECE61E0B-961C-498B-833E-842E8F7D8EDF}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BaseProject.Application", "baseProject.Application\BaseProject.Application.csproj", "{CDABDACF-55C4-41F8-9242-B1A612EB7CFA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BaseProject.Application", "BaseProject.Application\BaseProject.Application.csproj", "{CDABDACF-55C4-41F8-9242-B1A612EB7CFA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
