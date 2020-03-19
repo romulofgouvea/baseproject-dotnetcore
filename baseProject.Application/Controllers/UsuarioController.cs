@@ -123,7 +123,7 @@ namespace BaseProject.Application.Controllers
                 }
 
                 return StatusCode(
-                    (int)HttpStatusCode.OK,
+                    (int)HttpStatusCode.Created,
                     ResponseHelper.Create("Sucesso", novoUsuario)
                 );
             }
